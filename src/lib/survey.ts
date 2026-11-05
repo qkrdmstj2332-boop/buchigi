@@ -41,13 +41,45 @@ function visitorId() {
   }
 }
 
-export function submitAnswer(answer: SurveyAnswer) {
+function post(params: Record<string, string>) {
   if (!SURVEY_ENDPOINT) return;
   // Form-encoded + no-cors keeps this a "simple" request, which Apps Script accepts without a CORS preflight.
   // The response is opaque, so failures are silent; the visitor's own choice is already saved locally.
   fetch(SURVEY_ENDPOINT, {
     method: "POST",
     mode: "no-cors",
-    body: new URLSearchParams({ answer, visitor: visitorId() }),
+    body: new URLSearchParams({ ...params, visitor: visitorId() }),
   }).catch(() => {});
+}
+
+export function submitAnswer(answer: SurveyAnswer) {
+  post({ answer });
+}
+
+// Follow-up questions asked after a "yes"; the sheet's 상세 응답 tab gets one row per completed set.
+export const DETAIL_QUESTIONS = [
+  { key: "age", question: "본인의 나이대를 알려주세요", options: ["10대", "20대", "30대", "40대", "50대", "60대 이상"] },
+  { key: "parentAge", question: "부모님의 나이대를 알려주세요", options: ["40대 이하", "50대", "60대", "70대", "80대 이상"] },
+  { key: "living", question: "부모님과 따로 살고 계신가요?", options: ["네, 독립했어요", "아니요, 함께 살아요"] },
+] as const;
+
+export type SurveyDetails = Record<(typeof DETAIL_QUESTIONS)[number]["key"], string>;
+
+const DETAILS_KEY = "buchigi-survey-details-done";
+
+export function getDetailsDone(): boolean {
+  try {
+    return localStorage.getItem(DETAILS_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+export function submitDetails(details: SurveyDetails) {
+  try {
+    localStorage.setItem(DETAILS_KEY, "1");
+  } catch {
+    // ignore
+  }
+  post({ type: "detail", ...details });
 }
