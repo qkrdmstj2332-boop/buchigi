@@ -11,6 +11,8 @@ import { Reviews } from "@/sections/Reviews";
 import { Pricing } from "@/sections/Pricing";
 import { Faq } from "@/sections/Faq";
 import { Final } from "@/sections/Final";
+import { Survey } from "@/sections/Survey";
+import { SurveyPopup } from "@/components/SurveyPopup";
 
 const iconProps = { size: 18, strokeWidth: 1.75 };
 const MENU_ICONS = {
@@ -35,6 +37,7 @@ export default function App() {
   const compact = useCompact(1100);
   return (
     <MotionConfig reducedMotion="user">
+      <SurveyPopup />
       <TopNav
         brand="부치기 바치기"
         links={Object.keys(NAV)}
@@ -62,6 +65,7 @@ export default function App() {
         <Pricing />
         <Faq />
         <Final />
+        <Survey />
       </main>
       <Footer
         brand="부치기 바치기"
