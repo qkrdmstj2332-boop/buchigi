@@ -4,7 +4,8 @@
 export type SurveyAnswer = "yes" | "no";
 
 /** Google Apps Script web app URL ("…/exec"). Leave empty to skip sending answers. */
-export const SURVEY_ENDPOINT = "";
+export const SURVEY_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbzGelcscwLlmCl2_GSYcn0pHjUVIq3KQE6uvlYAoakgBJxvj1LQlHCu8MqVJ1YRj2ER/exec";
 
 const ANSWER_KEY = "buchigi-survey-answer";
 const VISITOR_KEY = "buchigi-visitor-id";
