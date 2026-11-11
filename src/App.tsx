@@ -13,7 +13,6 @@ import { Faq } from "@/sections/Faq";
 import { Final } from "@/sections/Final";
 import { Survey } from "@/sections/Survey";
 import { SurveyPopup } from "@/components/SurveyPopup";
-import { DemoAccessModal } from "@/components/DemoAccessModal";
 
 const iconProps = { size: 18, strokeWidth: 1.75 };
 const MENU_ICONS = {
@@ -36,19 +35,18 @@ function useCompact(max: number) {
 
 export default function App() {
   const compact = useCompact(1100);
-  const [demoOpen, setDemoOpen] = useState(false);
   return (
     <MotionConfig reducedMotion="user">
       <SurveyPopup />
-      <DemoAccessModal open={demoOpen} onClose={() => setDemoOpen(false)} />
       <TopNav
         brand="부치기 바치기"
+        brandLogo={`${import.meta.env.BASE_URL}assets/logo-lockup.png`}
         links={Object.keys(NAV)}
         onNavigate={(l) => (l ? scrollToId(NAV[l]) : window.scrollTo({ top: 0, behavior: "smooth" }))}
         signInLabel="로그인"
         secondaryLabel="상담 문의"
         primaryLabel="무료로 시작"
-        onPrimary={() => setDemoOpen(true)}
+        onPrimary={() => scrollToId("pricing")}
         onSecondary={() => scrollToId("faq")}
         compact={compact}
         linkIcons={MENU_ICONS}
