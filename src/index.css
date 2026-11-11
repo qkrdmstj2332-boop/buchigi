@@ -32,7 +32,7 @@
 
 @layer components {
   /* Type scale */
-  .t-display-xl { font-size: var(--display-xl-size); font-weight: var(--display-xl-weight); line-height: var(--display-xl-lh); letter-spacing: var(--display-xl-ls); }
+  .t-display-xl { font-family: var(--font-display); font-size: var(--display-xl-size); font-weight: var(--weight-display); line-height: var(--display-xl-lh); letter-spacing: var(--display-xl-ls); }
   .t-display-lg { font-size: var(--display-lg-size); font-weight: var(--display-lg-weight); line-height: var(--display-lg-lh); letter-spacing: var(--display-lg-ls); }
   .t-headline { font-size: var(--headline-size); font-weight: var(--headline-weight); line-height: var(--headline-lh); letter-spacing: var(--headline-ls); }
   .t-subhead { font-size: var(--subhead-size); font-weight: var(--subhead-weight); line-height: var(--subhead-lh); letter-spacing: var(--subhead-ls); }

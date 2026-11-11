@@ -39,6 +39,9 @@
 /* Typography */
 --font-sans:"Inter","Pretendard Variable",Pretendard,"SF Pro Display",system-ui,helvetica,sans-serif;
 --font-mono:"JetBrains Mono","Pretendard Variable","SF Mono",menlo,monospace;
+/* Brand wordmark and hero headline: Pretendard Bold */
+--font-display:"Pretendard Variable",Pretendard,system-ui,sans-serif;
+--weight-display:700;
 --weight-light:320;
 --weight-book:330;
 --weight-regular:340;
