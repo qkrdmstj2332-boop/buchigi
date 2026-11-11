@@ -39,14 +39,17 @@
 /* Typography */
 --font-sans:"Inter","Pretendard Variable",Pretendard,"SF Pro Display",system-ui,helvetica,sans-serif;
 --font-mono:"JetBrains Mono","Pretendard Variable","SF Mono",menlo,monospace;
+/* Brand wordmark and hero headline: Pretendard Bold */
+--font-display:"Pretendard Variable",Pretendard,system-ui,sans-serif;
+--weight-display:700;
 --weight-light:320;
 --weight-book:330;
 --weight-regular:340;
 --weight-medium:480;
 --weight-semibold:540;
 --weight-bold:700;
---display-xl-size:86px;--display-xl-weight:700;--display-xl-lh:1.00;--display-xl-ls:-1.72px;
---display-lg-size:64px;--display-lg-weight:700;--display-lg-lh:1.10;--display-lg-ls:-0.96px;
+--display-xl-size:86px;--display-xl-weight:340;--display-xl-lh:1.00;--display-xl-ls:-1.72px;
+--display-lg-size:64px;--display-lg-weight:340;--display-lg-lh:1.10;--display-lg-ls:-0.96px;
 --headline-size:26px;--headline-weight:540;--headline-lh:1.35;--headline-ls:-0.26px;
 --subhead-size:26px;--subhead-weight:340;--subhead-lh:1.35;--subhead-ls:-0.26px;
 --card-title-size:24px;--card-title-weight:700;--card-title-lh:1.45;--card-title-ls:0;

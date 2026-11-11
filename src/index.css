@@ -33,7 +33,7 @@
 @layer components {
   /* Type scale */
   .t-display-xl { font-family: var(--font-display); font-size: var(--display-xl-size); font-weight: var(--weight-display); line-height: var(--display-xl-lh); letter-spacing: var(--display-xl-ls); }
-  .t-display-lg { font-size: var(--display-lg-size); font-weight: var(--display-lg-weight); line-height: var(--display-lg-lh); letter-spacing: var(--display-lg-ls); }
+  .t-display-lg { font-family: var(--font-display); font-size: var(--display-lg-size); font-weight: var(--weight-display); line-height: var(--display-lg-lh); letter-spacing: var(--display-lg-ls); }
   .t-headline { font-size: var(--headline-size); font-weight: var(--headline-weight); line-height: var(--headline-lh); letter-spacing: var(--headline-ls); }
   .t-subhead { font-size: var(--subhead-size); font-weight: var(--subhead-weight); line-height: var(--subhead-lh); letter-spacing: var(--subhead-ls); }
   .t-card-title { font-size: var(--card-title-size); font-weight: var(--card-title-weight); line-height: var(--card-title-lh); }
@@ -53,7 +53,7 @@
   .tile { background: var(--surface-tile); border-radius: var(--radius-lg); padding: var(--space-xl); }
   .wcard { background: var(--surface-card); border-radius: var(--radius-lg); padding: var(--space-xl); box-shadow: var(--elevation-1); }
   .read { font-size: var(--body-lg-size); line-height: 1.6; font-weight: 400; }
-  .num { font-size: var(--display-lg-size); font-weight: var(--display-lg-weight); letter-spacing: var(--display-lg-ls); line-height: 1; }
+  .num { font-family: var(--font-display); font-size: var(--display-lg-size); font-weight: var(--weight-display); letter-spacing: var(--display-lg-ls); line-height: 1; }
   .bar { height: 36px; border-radius: var(--radius-pill); background: var(--color-canvas); box-shadow: inset 0 0 0 1px var(--color-hairline); position: relative; overflow: hidden; }
   .bar span { position: absolute; inset: 0 auto 0 0; border-radius: var(--radius-pill); display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; }
   .bar i { font-style: normal; background: #000; color: #fff; border-radius: var(--radius-pill); padding: 1px 12px; font-size: 16px; font-weight: 540; }

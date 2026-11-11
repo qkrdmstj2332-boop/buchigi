@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { Button, PillTabs, PricingCard } from "@/components/ds";
 import { GlowCard } from "@/components/ui/spotlight-card";
-import { openApp } from "@/lib/app";
+import { demoAppLink } from "@/lib/demo";
 
 // Same easing as the testimonials section so the two reveals feel like one system.
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -48,7 +48,7 @@ export function Pricing() {
               description={<motion.span key={t.d} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>{t.d}</motion.span>}
               features={t.f}
               highlighted={t.hi}
-              cta={<Button fullWidth variant={t.hi ? "primary" : "outline"} onClick={openApp}>{t.cta}</Button>}
+              cta={<Button fullWidth variant={t.hi ? "primary" : "outline"} onClick={() => window.open(demoAppLink(), "_blank", "noopener")}>{t.cta}</Button>}
               style={{ padding: "var(--space-xl)", flex: 1, borderRadius: 21 }}
             />
             </GlowCard>

@@ -74,7 +74,7 @@ export function TopNav({
     <header ref={headerRef} style={{ position: "sticky", top: 0, zIndex: 20, background: "var(--color-canvas)", ...style }}>
       {/* Below 560px the bar tightens and the secondary button moves into the dropdown so everything fits on one row. */}
       <div className="flex items-center gap-6 px-6 max-[560px]:gap-3 max-[560px]:px-4" style={{ height: "var(--nav-height)" }}>
-        <a onClick={() => go(null)} style={{ fontSize: 22, fontWeight: 540, letterSpacing: "-0.6px", textDecoration: "none", cursor: "pointer", color: "var(--color-ink)", whiteSpace: "nowrap", flex: "none", display: "flex", alignItems: "center" }}>
+        <a onClick={() => go(null)} style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: "var(--weight-display)", letterSpacing: "-0.6px", textDecoration: "none", cursor: "pointer", color: "var(--color-ink)", whiteSpace: "nowrap", flex: "none", display: "flex", alignItems: "center" }}>
           {brandLogo ? <img src={brandLogo} alt={brand} style={{ height: 40, width: "auto", display: "block" }} /> : brand}
         </a>
         {compact ? (
