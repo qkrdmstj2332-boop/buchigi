@@ -55,19 +55,12 @@ export function DemoAccessModal({ open, onClose }: { open: boolean; onClose: () 
             </div>
 
             <div style={{ padding: "28px 24px", display: "flex", flexDirection: "column", gap: 20 }}>
-              <div>
-                <h2 id="demo-title" style={{ fontSize: 22, fontWeight: 540, lineHeight: 1.45, letterSpacing: "-0.26px", margin: 0, wordBreak: "keep-all" }}>
-                  가족 코드가 준비됐어요
-                </h2>
-                <p className="t-body-sm" style={{ margin: "6px 0 0", opacity: 0.75 }}>
-                  자녀 앱 첫 화면에 아래 두 가지를 입력하면 바로 시작할 수 있어요.
-                </p>
-              </div>
+              <h2 id="demo-title" style={{ fontSize: 22, fontWeight: 540, lineHeight: 1.45, letterSpacing: "-0.26px", margin: 0, wordBreak: "keep-all" }}>
+                우리 가족코드 발급 완료!
+              </h2>
               <CopyField label="서버 주소" value={DEMO_SERVER} emptyText="서버 준비 중이에요" />
               <CopyField label="가족 코드" value={DEMO_CODE} mono />
-              <p className="t-body-sm" style={{ margin: 0, opacity: 0.6 }}>
-                발표용 체험 계정이라 여러 사람이 함께 써요. 실제 가족 사진이나 목소리는 올리지 말아 주세요.
-              </p>
+              <p className="t-body-sm" style={{ margin: 0, opacity: 0.6 }}>*배포용 코드입니다</p>
             </div>
 
             <div style={{ display: "flex", justifyContent: "flex-end", gap: 10, padding: "16px 24px 20px", borderTop: "1px solid var(--color-hairline-soft)" }}>
