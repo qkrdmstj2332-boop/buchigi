@@ -5,7 +5,7 @@
 export const APP_URL = "https://welcometosuziland.github.io/buchigi-app/app/";
 
 /** Render server address, without a trailing slash. Empty until the server is deployed. */
-export const DEMO_SERVER = "";
+export const DEMO_SERVER = "https://buchigi-server.onrender.com";
 
 export const DEMO_CODE = "NODROP-JB97-Q6H6";
 
